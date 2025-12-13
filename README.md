@@ -15,9 +15,7 @@ The source code is intended for use with the **gcc** compiler and the **MPFR** f
 This distribution consists of the following files:
 
   * [README.md][readme-link]. The file you are currently reading.
-  
-  * [license.txt][license-link] A text file containing the MIT License which applies to this work.
-  
+    
   * [libHGT.pdf][libHGT-pdf-link]. A PDF file with further discussion of our software, the building
   of our software program, and the mathematics behind our software. The PDF is created using LaTex, 
   which was needed to allow proper display / layout of the mathematics.
@@ -63,7 +61,7 @@ See their respective links for theirs terms of license.
 [RSremainder-c-link]:	https://github.com/terry98004/libHGT/blob/master/RSremainder.c
 [ThetaOfT-c-link]:		https://github.com/terry98004/libHGT/blob/master/ThetaOfT.c
 [GramAtN-c-link]:		https://github.com/terry98004/libHGT/blob/master/GramAtN.c
-[GramNearT-c-link]:		https://github.com/terry98004/libHGT/blob/master/GramNeatT.c
+[GramNearT-c-link]:		https://github.com/terry98004/libHGT/blob/master/GramNearT.c
 [HardyZcalc-c-link]:	https://github.com/terry98004/libHGT/blob/master/HardyZcalc.c
 [hgt-h-link]:			https://github.com/terry98004/libHGT/blob/master/hgt.h
 [makehgt-bat-link]:		https://github.com/terry98004/libHGT/blob/master/makehgt.bat
