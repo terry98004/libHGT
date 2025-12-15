@@ -7,8 +7,17 @@ Let 't' be a positive real number and the ordinate of a point (1/2 + it) along t
 
 The included PDF provides important additional information, and briefly describes the mathematics behind the calculations.  Much greater detail on the mathematics is given in my book: *A Study of Riemann's Zeta Function* by Terrence P. Murphy.  The book is available on Amazon.  Go [here][website-link] to view the Table of Contents and Preface for all of my books.
 
-The source code is intended for use with the **gcc** compiler and the **MPFR** floating point library.  Although only tested on 
-64-bit Windows 11, the source code should be portable to other gcc-supported 64-bit operating systems.
+## Building the Static Library
+
+For Windows 11 users, the static library **libhgt.a** is included with any release posted on GitHub.
+
+For other operating systems, you will need to build the library, as follows.
+
+*  You need the [**gcc**][gcc-gnu-link] C compiler installed on your system.
+
+*  Following the build logic in the **makehgt.bat** file, you need to create the necessary 'makefile', in the form that applies to your operating system and the **gcc** compiler.
+
+You can then build the static library **libhgt.a** from the provided source files.
 
 ## Files
 
