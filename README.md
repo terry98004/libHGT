@@ -51,6 +51,10 @@ This distribution consists of the following files:
   this file is a Windows batch file (**not** an actual makefile), but can be easily converted to 
   a standard makefile.
 
+## Examples Using the libHGT Library
+
+See [HardyZ][HardyZ-link], [Gram][Gram-link] and [Turing][Turing-link] for sample code using this **libHGT** library.
+
 ## Terms of use
 
 This **Hardy Z Function Calculator** is free and distributed under the
@@ -74,6 +78,9 @@ See their respective links for theirs terms of license.
 [HardyZcalc-c-link]:	https://github.com/terry98004/libHGT/blob/master/HardyZcalc.c
 [hgt-h-link]:			https://github.com/terry98004/libHGT/blob/master/hgt.h
 [makehgt-bat-link]:		https://github.com/terry98004/libHGT/blob/master/makehgt.bat
+[HardyZ-link]:		https://github.com/terry98004/HardyZ/
+[Gram-link]:		https://github.com/terry98004/Gram/
+[Turing-link]:		https://github.com/terry98004/Turing/
 [mpfr-link]:			https://www.mpfr.org/
 [gcc-gnu-link]:			https://gcc.gnu.org/
 [msys2-link]:			https://www.msys2.org/
