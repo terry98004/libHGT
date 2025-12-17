@@ -13,7 +13,7 @@ For Windows 11 users, the static library **libhgt.a** is included with any relea
 
 For other operating systems, you will need to build the library, as follows.
 
-*  You need the [**gcc**][gcc-gnu-link] C compiler installed on your system.
+*  You need the [**gcc**][gcc-gnu-link] C compiler installed on your system. That installation must include the **GNU GMP** and **GNU MPFR** (floating point) libraries -- you need **mpfr.h** here and you will need the **libmpfr.a** and **libgmp.a** static libraries when you link to **libhgt.a** to create an execuable. 
 
 *  Following the build logic in the **makehgt.bat** file, you need to create the necessary 'makefile', in the form that applies to your operating system and the **gcc** compiler.
 
