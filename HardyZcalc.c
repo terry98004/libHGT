@@ -1,13 +1,10 @@
 // -------------------------------------------------------------------
-// Program last modified December 4, 2025. 
-// Copyright (c) 2024-2025 Terrence P. Murphy
+// Program last modified January 9, 2026. 
+// Copyright (c) 2024-2026 Terrence P. Murphy
 // MIT License -- see hgt.h for details.
 // -------------------------------------------------------------------
 
-#include <quadmath.h>
-#define MPFR_WANT_FLOAT128 1
-
-#include <time.h>
+//#include <time.h>
 #include <stdio.h>
 #include <math.h>			
 #include <stdlib.h>
@@ -127,10 +124,11 @@ mpfr_inits2 (hgt_init.DefaultBits,
 
 // ---------------------------------------------------------------
 // Compute N and P for the given 't'. 
-// NOTE: Because N is (currently) an unsigned int (we assume 32-bit),
-// then 0 <= N <= 4,294,967,295.  
-// Thus, t cannot exceed about 1.15 * 10^{20} in the calcs below.
-// (We assume here that the value of 't' was previously checked).
+// NOTE: Because N is (currently) a uint64_t (we assume 64-bit),
+// then 0 <= N <= 18,446,744,073,709,551,615.  
+// Although this allows for a much larger 't', we will currently 
+// assume that 't' does not exceed about 1.15 * 10^{20} in the 
+// calcs below. (A value of 't' that was previously checked).
 // ---------------------------------------------------------------	
 mpfr_div (tOver2Pi, comphz->t, hgt_init.my2Pi, MPFR_RNDN);
 mpfr_sqrt (T, tOver2Pi, MPFR_RNDN);

@@ -1,12 +1,10 @@
 // -------------------------------------------------------------------
-// Program last modified December 10, 2025. 
-// Copyright (c) 2025 Terrence P. Murphy
+// Program last modified January 9, 2026. 
+// Copyright (c) 2025-2026 Terrence P. Murphy
 // MIT License -- see hgt.h for details.
 // -------------------------------------------------------------------
 
 #include <errno.h>
-#include <quadmath.h>
-#define MPFR_WANT_FLOAT128 1
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -215,16 +213,16 @@ return(DebugFlags % DebugNum == 0 ? true : false);
 // If validated, we return1, otherwise we return a negative value.
 // As a side note, __float128 are accurate to about 34 digits.
 // -------------------------------------------------------------------
-int GetLargeNumber(const char *str, __float128 Min, __float128 Max, bool IntegerOnly)
+int GetLargeNumber(const char *str, double Min, double Max, bool IntegerOnly)
 {
 char * 		endptr;
 size_t		Len;
-__float128 	Value;
+double		Value;
 int			Result = 1;
 const char  sAllowed[] = "-.0123456789"; 
 
 Len = strlen(str);
-Value = strtoflt128 (str, &endptr);
+Value = strtod (str, &endptr);
 
 if(Len < 1 || Len > HGT_MAX_CMDLINE_STRLEN || strspn(str, sAllowed) != Len){
 	Result = -1; 
@@ -270,15 +268,4 @@ if(Value < Min || Value > Max){
 	return(-1); 
 	}
 return(Value);
-}
-
-// -------------------------------------------------------------------
-// For testing, this does a printf of a __float128 value.
-// -------------------------------------------------------------------
-void Show128(__float128 x)
-{
-char buf[128];
-
-quadmath_snprintf (buf, sizeof buf, "%.20Qf", x);
-printf("%s \n", buf);	
 }

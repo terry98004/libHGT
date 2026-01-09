@@ -1,14 +1,14 @@
 
 // -------------------------------------------------------------------
-// File last modified December 8, 2025. 
-// Copyright (c) 2025 Terrence P. Murphy
+// File last modified January 9, 2026. 
+// Copyright (c) 2025-2026 Terrence P. Murphy
 // MIT License -- see below for details.
 // -------------------------------------------------------------------
 
 /*
 MIT License
 
-Copyright (c) 2025 Terrence P. Murphy
+Copyright (c) 2025-2026 Terrence P. Murphy
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -81,10 +81,10 @@ struct computeHZ {
 #define		HGT_TUR_D_POINT_MAX		16
 
 #define		HGT_TUR_GRAM_PTS_MIN	1
-#define		HGT_TUR_GRAM_PTS_MAX	16
+#define		HGT_TUR_GRAM_PTS_MAX	24
 
 #define		HGT_TUR_SUBINTVL_MIN	8
-#define		HGT_TUR_SUBINTVL_MAX	32
+#define		HGT_TUR_SUBINTVL_MAX	128
 
 #define		HGT_RPT_DEC_PLACES_MIN	2	
 #define		HGT_RPT_DEC_PLACES_MAX	60
@@ -110,7 +110,7 @@ struct computeHZ {
 
 bool DebugMode(int iDebug, int DebugNum);
 int GetSmallPositiveInteger(const char *str, int Min, int Max);
-int GetLargeNumber(const char *str, __float128 Min, __float128 Max, bool IntegerOnly);
+int GetLargeNumber(const char *str, double Min, double Max, bool IntegerOnly);
 int GetDecimalDigits(const char *str);
 
 int InitMPFR(int DefaultBits, int MaxThreads, int DebugFlags, bool CalcHardy);
@@ -130,8 +130,6 @@ int RS_Remainder(mpfr_t *Result, mpfr_t tOver2Pi, bool nEven, mpfr_t P, int iFlo
 int HardyZWithCount(mpfr_t t, mpfr_t Incr, int Count, int CallerID, pHardyZCallback pCallbackHZ);
 void * HardyZSingleThreaded(void * comphz);
 int HardyZSingle(struct computeHZ * comphz);
-
-void Show128(__float128 x);
 
 int ValidateHardyT(const char *str);
 int ValidateIncr(const char *str);

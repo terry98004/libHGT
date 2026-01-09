@@ -1,11 +1,9 @@
 // -------------------------------------------------------------------
-// Program last modified December 4, 2025. 
-// Copyright (c) 2024-2025 Terrence P. Murphy
+// Program last modified January 9, 2026. 
+// Copyright (c) 2024-2026 Terrence P. Murphy
 // MIT License -- see hgt.h for details.
 // -------------------------------------------------------------------
 
-#include <quadmath.h>
-#define MPFR_WANT_FLOAT128 1
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
