@@ -15,7 +15,7 @@ For other operating systems, you will need to build the library, as follows.
 
 *  You need the [**gcc**][gcc-gnu-link] C compiler installed on your system. That installation must include the **GNU GMP** and **GNU MPFR** (floating point) libraries -- you need **mpfr.h** here and you will need the **libmpfr.a** and **libgmp.a** static libraries when you link to **libhgt.a** to create an execuable. 
 
-*  Following the build logic in the **makehgt.bat** file, you need to create the necessary 'makefile', in the form that applies to your operating system and the **gcc** compiler.
+*  Following the build logic in the **makehgt.bat** file, we provide a **makefile**, in the form that should work with your operating system and the **gcc** compiler.
 
 You can then build the static library **libhgt.a** from the provided source files.
 
@@ -45,7 +45,9 @@ This distribution consists of the following files:
 
   * [HardyZcalc.c][HardyZcalc-c-link]. This source code file contains the public facing library function used to compute one or more Hardy Z values.
 
-  * [hgt.h][hgt-h-link]. The is the only (local) include file for the library.  
+  * [hgt.h][hgt-h-link]. The is the only (local) include file for the library.
+  
+  * [makefile][makefile-link]. This makefile is for use with the make program that is available with most development environments.
   
   * [makehgt.bat][makehgt-bat-link]. The is the "makefile" for the program.  Currently,
   this file is a Windows batch file (**not** an actual makefile), but can be easily converted to 
@@ -77,6 +79,7 @@ See their respective links for theirs terms of license.
 [GramNearT-c-link]:		https://github.com/terry98004/libHGT/blob/master/GramNearT.c
 [HardyZcalc-c-link]:	https://github.com/terry98004/libHGT/blob/master/HardyZcalc.c
 [hgt-h-link]:			https://github.com/terry98004/libHGT/blob/master/hgt.h
+[makefile-link]:	https://github.com/terry98004/libHGT/blob/master/makefile
 [makehgt-bat-link]:		https://github.com/terry98004/libHGT/blob/master/makehgt.bat
 [HardyZ-link]:		https://github.com/terry98004/HardyZ/
 [Gram-link]:		https://github.com/terry98004/Gram/
