@@ -4,7 +4,6 @@
 // MIT License -- see hgt.h for details.
 // -------------------------------------------------------------------
 
-//#include <time.h>
 #include <stdio.h>
 #include <math.h>			
 #include <stdlib.h>
