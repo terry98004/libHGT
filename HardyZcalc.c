@@ -1,5 +1,5 @@
 // -------------------------------------------------------------------
-// Program last modified January 9, 2026. 
+// Program last modified January 14, 2026. 
 // Copyright (c) 2024-2026 Terrence P. Murphy
 // MIT License -- see hgt.h for details.
 // -------------------------------------------------------------------
@@ -15,7 +15,6 @@
 #include <mpfr.h>
 
 #include "hgt.h"
-
 
 extern struct	HGT_INIT	hgt_init;
 
@@ -45,7 +44,9 @@ mpfr_set (localT, t, MPFR_RNDN);
 // If Count is greater than one, we increment 't' by the Incr
 // amount and loop again.  
 //
-// In the loop, we call ComputeSingleHardyZ and print the result.
+// In the loop, we manage threads (if requested) and call HardyZSingle 
+// (directly or indirectly) Count times.  We print the results using 
+// pCallbackHZ.
 // -------------------------------------------------------------------
 int			j, m, iRemaining;
 pthread_t	thread_id[HGT_THREADS_MAX];
@@ -139,10 +140,6 @@ nEven = (ui64N % 2 == 0) ? true : false;
 // Compute the remainder term.
 // ---------------------------------------------------------------		
 RS_Remainder(&Remainder, tOver2Pi, nEven, P, hgt_init.DefaultBits);
-
-if(DebugMode(hgt_init.DebugFlags, PRINT_REMAINDER) == true) {
-	mpfr_printf("Remainder R(4): %.50Rf \n", Remainder);
-	}
 	
 // ---------------------------------------------------------------
 // Now compute the Main term and add to Remainder to get HardyZ.
