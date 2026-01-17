@@ -69,7 +69,7 @@ while(i < Count)
 			pthread_create( &thread_id[j], NULL, HardyZSingleThreaded, &comphz[j] );
 			}
 		else {
-			HardyZSingle(&comphz[0]); // i we arrive here, j = 0
+			HardyZSingle(&comphz[0]); // if we arrive here, j = 0
 			}
 		mpfr_add (localT, localT, Incr, MPFR_RNDN);
 		}
